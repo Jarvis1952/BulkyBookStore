@@ -42,9 +42,9 @@
                         <td>@obj.ISBN</td>
                         <td>@obj.Price</td>
                         <td>@obj.AutherName</td>
-                        <td>@obj.CategoryId</td>
+                        <td>@obj.Category.Name</td>
                         <td>
-                            <div class="w-75 btn-group" role="group">
+                            <div class="w-75 btn-group" role="group" >
                                 <a asp-controller="Product" asp-action="Upsert" asp-route-ProductId="@obj.ProductID" class="btn btn-primary mx-2">
                                     <i class="b bi-pencil-square"> </i>  Edit
                                 </a>
