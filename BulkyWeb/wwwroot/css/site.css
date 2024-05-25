@@ -7,6 +7,13 @@ a.navbar-brand {
     word-break: break-all;
 }
 
+nav {
+    height: 10px;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
 
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {

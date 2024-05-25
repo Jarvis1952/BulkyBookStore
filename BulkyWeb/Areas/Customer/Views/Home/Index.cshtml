@@ -1,34 +1,62 @@
 ﻿@model IEnumerable<Product>
 
-<div class =" row pb-3">
+
+
+
+
+@*<div lc-helper="background" class="container-fluid py-5 mb-4 d-flex justify-content-center" style="  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1124&amp;q=100');
+    background-position: center;
+background-size:cover;
+background-repeat:no-repeat">
+    <div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12" style=" backdrop-filter: blur(6px) saturate(102%);
+    -webkit-backdrop-filter: blur(6px) saturate(102%);
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);">
+        <div class="lc-block">
+            <div editable="rich">
+                <h2 class="fw-bolder display-3">Custom jumbotron</h2>
+            </div>
+        </div>
+        <div class="lc-block col-md-8">
+            <div editable="rich">
+                <p class="lead">
+                    Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
+                </p>
+            </div>
+        </div>
+        <div class="lc-block">
+            <a class="btn btn-dark" href="#" role="button">Click me, I'm a button</a>
+        </div>
+    </div>
+</div>*@
+
+
+
+
+<div class="row">
+        <h2 class="text-center">Top Picks</h2>
+        <hr />
+    </div>
+
+<div class="row pt-2 gap-5 d-flex justify-content-between">
     @foreach(var product in Model)
     {
-        <div class="col-lg-3 col-sm-3">
-            <div class="row p-2">
-                <div class="col-12 p-1">
-                    <div class="card border-0 p-3 shadow border-top border-5 rounded">
-                        <img src="@product.ImgUrl" class="card-img-top rounded"/>
-                        <div class="card-body pb-0">
+        <div class="p-2" style="width: 15rem;">
+            <img src="@product.ImgUrl" class="card-img-top" alt="...">
+            <div class="card-body  p-3">
+                <h5 class="card-title">@product.Title</h5>
+                <p class="card-text"> By @product.AutherName</p>
 
-                            <div class="pl-1"> 
-                                <p class="card-title h4 text-dark opacity-75 text-uppercase text-center">@product.Title</p>
-                                <p class="card-title text-warning text-center">by @product.AutherName</p>
-                            </div>
+                <div class="text-center">
+                    <p class="text-dark opacity-80 mb-0"> Price: <span class="text-decoration-line-through">@product.ListPrice.ToString("c")</span></p>
+                </div>
 
-                            <div class="pl-1">
-                                <p class="text-dark opacity-80 mb-0 text-center"> Price: <span class="text-decoration-line-through">@product.ListPrice.ToString("c")</span></p>
-                            </div>
-
-                            <div class="pl-1">
-                                <p class="text-dark opacity-80  text-center"> Lowest Price: <span>@product.Price100.ToString("c")</span></p>
-                            </div>
-
-                        </div>
-
-                        <div>
-                            <a asp-action="Details" asp-route-id="@product.ProductID" class="btn btn-primary bg-gradient border-0 form-control">Details</a>
-                            </div>
-                    </div>
+                <div class="pl-1 text-center">
+                    <p class="text-dark opacity-80 "> Lowest Price: <span>@product.Price100.ToString("c")</span></p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a asp-action="Details" asp-route-id="@product.ProductID" class="btn btn-secondary rounded-3 p-2 text-capitalize">Details</a>
                 </div>
             </div>
         </div>

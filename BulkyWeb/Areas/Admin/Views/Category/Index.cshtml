@@ -1,10 +1,10 @@
 ﻿@model List<Category>
 
 <div class="card shadow border-0 mt-4">
-    <div class="card-header bg-secondary bg-gradient m-lg-0 py-3">
+    <div class="card-header bg-secondary bg-gradient m-lg-0 ">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2"> Category List</h2>
+                <h2 class="text-white"> Category List</h2>
             </div>
         </div>
     </div>
@@ -38,15 +38,13 @@
                         <td>@obj.Name</td>
                         <td>@obj.DisplayOrder</td>
                         <td>
-                            <div class="w-75 btn-group" role="group">
-                                <a asp-controller="Category" asp-action="Edit" asp-route-CategoryId="@obj.Id" class="btn btn-primary mx-2">
-                                    <i class="b bi-pencil-square"> </i>  Edit
-                                </a>
+                            <a asp-controller="Category" asp-action="Edit" asp-route-CategoryId="@obj.Id" class="btn btn-primary mx-2">
+                                <i class="b bi-pencil-square"> </i>  Edit
+                            </a>
 
-                                <a asp-controller="Category" asp-action="Delete" asp-route-CategoryId="@obj.Id" class="btn btn-danger mx-2">
-                                    <i class="b bi-trash-fill"> </i>  Delete
-                                </a>
-                            </div>
+                            <a asp-controller="Category" asp-action="Delete" asp-route-CategoryId="@obj.Id" class="btn btn-danger mx-2" style="padding-left:20px;">
+                                <i class="b bi-trash-fill"> </i>  Delete
+                            </a>
                         </td>
                     </tr>
                 }
