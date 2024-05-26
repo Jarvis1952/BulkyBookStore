@@ -1,15 +1,15 @@
-﻿using Bulky.DataAccess.Repository;
-using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Bulky.Utility;
-using BulkyWeb.Models;
+﻿using BookShelf.DataAccess.Repository;
+using BookShelf.DataAccess.Repository.IRepository;
+using BookShelf.Models;
+using BookShelf.Utility;
+using BookShelfWeb.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Security.Claims;
 
-namespace BulkyWeb.Areas.Customer.Controllers
+namespace BookShelfWeb.Areas.Customer.Controllers
 {
     [Area("Customer")]
     public class HomeController : Controller
@@ -29,7 +29,7 @@ namespace BulkyWeb.Areas.Customer.Controllers
             IEnumerable<Product> productsList = _unitOfWork.Product.GetAll(includeProperties: "Category");
             return View(productsList);
         }
-
+        [HttpGet]
         public IActionResult Details(int Id)
         {
             ShoppingCart cart = new ()

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Bulky.DataAccess.Migrations
+namespace BookShelf.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddOrderHeadersAndOrderHeaders : Migration

@@ -1,7 +1,7 @@
-﻿using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Bulky.Models.ViewModels;
-using Bulky.Utility;
+﻿using BookShelf.DataAccess.Repository.IRepository;
+using BookShelf.Models;
+using BookShelf.Models.ViewModels;
+using BookShelf.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -10,7 +10,7 @@ using Stripe.Checkout;
 using System.Numerics;
 using System.Security.Claims;
 
-namespace BulkyWeb.Areas.Admin.Controllers
+namespace BookShelfWeb.Areas.Admin.Controllers
 {
 	[Area("Admin")]
     [Authorize]

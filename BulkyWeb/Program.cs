@@ -1,12 +1,12 @@
-using Bulky.DataAccess.Data;
-using Bulky.DataAccess.Repository;
-using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
+using BookShelf.DataAccess.Data;
+using BookShelf.DataAccess.Repository;
+using BookShelf.DataAccess.Repository.IRepository;
+using BookShelf.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using Bulky.Utility;
+using BookShelf.Utility;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using BulkyBook.Utility;
+using BookShelf.Utility;
 using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);

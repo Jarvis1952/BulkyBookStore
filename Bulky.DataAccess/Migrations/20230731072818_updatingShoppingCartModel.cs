@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Bulky.DataAccess.Migrations
+namespace BookShelf.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class updatingShoppingCartModel : Migration

@@ -1,16 +1,16 @@
-﻿using Bulky.DataAccess.Data;
-using Bulky.DataAccess.Repository;
-using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Bulky.Models.ViewModels;
-using Bulky.Utility;
+﻿using BookShelf.DataAccess.Data;
+using BookShelf.DataAccess.Repository;
+using BookShelf.DataAccess.Repository.IRepository;
+using BookShelf.Models;
+using BookShelf.Models.ViewModels;
+using BookShelf.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using NuGet.Packaging.Signing;
 using System.Data;
 
-namespace BulkyWeb.Areas.Admin.Controllers
+namespace BookShelfWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = SD.Role_Admin)]

@@ -1,14 +1,14 @@
-﻿using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Bulky.Models.ViewModels;
-using Bulky.Utility;
+﻿using BookShelf.DataAccess.Repository.IRepository;
+using BookShelf.Models;
+using BookShelf.Models.ViewModels;
+using BookShelf.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Stripe.Checkout;
 using Microsoft.AspNetCore.Identity.UI.Services;
 
-namespace BulkyWeb.Areas.Customer.Controllers
+namespace BookShelfWeb.Areas.Customer.Controllers
 {
     [Area("Customer")]
     [Authorize]
